@@ -15,10 +15,21 @@ export default function Rating(props) {
   );
 }
 
-Rating.defaultProps = {
-  value: 1
-}
+// Rating.defaultProps = {
+//   value: 1
+// }
 
-Rating.PropTypes = {
-  value: PropTypes.number.isRequired
-}
+Rating.propTypes = {
+  value: (props, propName, componentName) => {
+    const prop = props[propName];
+    if(!prop) {
+      return new Error(`${propName} is required in ${componentName}. Validation failed.`);
+    }
+    if (typeof prop != 'number') {
+      return new Error(`Invalid prop, ${propName} is expected to be a number in ${componentName}. ${typeof prop} found.`);
+    }
+    if(prop < 1 || prop > 5) {
+      return new Error(`Invalid prop, ${propName} should be in range 1 - 5 in ${componentName}. ${prop} found.`);
+    }
+  }
+};

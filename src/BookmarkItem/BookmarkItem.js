@@ -74,7 +74,19 @@ BookmarkItem.defaultProps = {
 
 BookmarkItem.propTypes = {
   title: PropTypes.string.isRequired,
-  url: Proptypes.string.isRequired,
+  url: (props, propName, componentName) => {
+    const prop = props[propName];
+
+    if(!prop) {
+      return new Error(`${propName} is required in ${componentName}. Validation Failed.`);
+    }
+    if (typeof prop != 'string') {
+      return new Error(`Invalid prop, ${propName} is expected to be a string in ${componentName}. ${typeof prop} found.`);
+    }
+    if (prop.length < 5 || !prop.match(new RegExp(/^https?:\/\/\))) {
+      return new Error(`Invalid prop, ${propName} must be min length 5 and begin http(s)://. Validation Failed.`);
+    }
+  },
   rating: PropTypes.number,
   description: PropTypes.string
-}
+};

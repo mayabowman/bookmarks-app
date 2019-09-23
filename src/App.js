@@ -8,7 +8,7 @@ import config from './config'
 import Rating from './Rating/Rating'
 import './App.css'
 
-const bookmarks = [
+// const bookmarks = [
   // {
   //   id: 0,
   //   title: 'Google',
@@ -30,7 +30,7 @@ const bookmarks = [
   //   rating: '4',
   //   desc: 'brings together the world\'s largest community of developers.'
   // }
-];
+// ];
 
 class App extends Component {
   state = {
