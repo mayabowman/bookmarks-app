@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
-import AddBookmark from './AddBookmark/AddBookmark';
-import BookmarkList from './BookmarkList/BookmarkList';
+import React, { Component } from 'react'
+import { Route } from 'react-router-dom'
+import AddBookmark from './AddBookmark/AddBookmark'
+import BookmarkList from './BookmarkList/BookmarkList'
 import BookmarksContext from './BookmarksContext'
-import Nav from './Nav/Nav';
-import config from './config';
-import './App.css';
+import Nav from './Nav/Nav'
+import config from './config'
+import Rating from './Rating/Rating'
+import './App.css'
 
 const bookmarks = [
   // {
@@ -100,6 +101,7 @@ class App extends Component {
             />
           </div>
         </BookmarksContext.Provider>
+        <Rating />
       </main>
     );
   }
