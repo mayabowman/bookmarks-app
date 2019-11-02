@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import BookmarksContext from '../BookmarksContext'
 import config from '../config'
 
-const Require = () => (
+const Required = () => (
   <span className='EditBookmark__required'>*</span>
 )
 
@@ -62,6 +62,7 @@ class EditBookmark extends Component {
   }
 
   handleChangeUrl = e => {
+    debugger
     this.setState({ url: e.target.value })
   }
 
