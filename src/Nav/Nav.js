@@ -8,7 +8,11 @@ export default function Nav(props) {
         Bookmark List
       </Link>
       {' '}
+<<<<<<< HEAD
       <Link to={'add-bookmark'}>
+=======
+      <Link to={'/add-bookmark'}>
+>>>>>>> context-startingpoint
         Add Bookmark
       </Link>
     </nav>
