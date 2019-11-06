@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "alias": "mayabowmans-bookmarks-app",
+  "alias": "my-bookmarks-app",
   "name": "bookmarks-app",
   "routes": [
     {
