@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 import React, { Component } from  'react';
 import { withRouter } from 'react-router-dom';
-=======
 import React, { Component } from  'react'
 import BookmarksContext from '../BookmarksContext'
->>>>>>> context-startingpoint
 import config from '../config'
 import './AddBookmark.css'
 
@@ -53,13 +50,8 @@ class AddBookmark extends Component {
         url.value = ''
         description.value = ''
         rating.value = ''
-<<<<<<< HEAD
-        this.props.history.push('/')
-        this.props.onAddBookmark(data)
-=======
         this.context.addBookmark(data)
         this.props.history.push('/')
->>>>>>> context-startingpoint
       })
       .catch(error => {
         this.setState({ error })
