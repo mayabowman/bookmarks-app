@@ -1,6 +1,5 @@
 import React, { Component } from  'react';
 import { withRouter } from 'react-router-dom';
-import React, { Component } from  'react'
 import BookmarksContext from '../BookmarksContext'
 import config from '../config'
 import './AddBookmark.css'
